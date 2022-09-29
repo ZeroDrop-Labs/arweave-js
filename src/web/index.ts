@@ -72,7 +72,8 @@ Arweave.init = function (apiConfig: ApiConfig = {}): Arweave {
 
 if (typeof globalThis === "object") {
   globalThis.Arweave = Arweave;
-} else if (typeof self === "object") {
+}
+if (typeof self === "object") {
   self.Arweave = Arweave;
 }
 
